@@ -1,0 +1,32 @@
+[project]
+name = "megascans-browser"
+version = "0.1.0"
+description = "ダウンロード済みの Megascans アセットを検索・表示するデスクトップアプリ"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pyside6>=6.11.2",
+]
+
+[project.scripts]
+megascans-browser = "megascans_browser:main"
+
+[build-system]
+requires = ["uv_build>=0.8,<1"]
+build-backend = "uv_build"
+
+[tool.ruff]
+line-length = 100
+extend-exclude = ["docs", "_learning", "*.md"]      # Markdown 内のコード例は対象外
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "B", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.16.10",
+]

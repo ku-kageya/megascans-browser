@@ -1,0 +1,16 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# 生成物（スキャンで作り直せる）
+*.db
+
+# Claude Code の設定（社内パスを含むので公開しない）
+.claude/
